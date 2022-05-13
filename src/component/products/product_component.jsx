@@ -15,7 +15,7 @@ const ProductComponent = ({ image, price, name, rating, onAdd }) => {
     RatingComp=[]
   }, []);
   return (
-    <div className="flex flex-col items-center gap-4 w-full rounded-md overflow-hidden bg-white shadow-lg">
+    <div className="flex flex-col items-center justify-between gap-4 w-full rounded-md overflow-hidden bg-white shadow-lg">
       <img
         src={image}
         alt="product image"
