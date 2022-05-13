@@ -1,0 +1,1 @@
+export const backgroundImage="/assets/images/bgImage.jpg";
