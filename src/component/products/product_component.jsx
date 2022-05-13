@@ -22,8 +22,8 @@ const ProductComponent = ({ image, price, name, rating, onAdd }) => {
         className="w-full h-[300px] object-cover object-center hover:scale-105 transition-all hover:saturate-0"
       />
       
-      <h4 className="font-bold text-lg text-cyan-900">{price}</h4>
-      <p className="text-base font-light text-cyan-900">{name}</p>
+      <h4 className="font-bold text-center text-lg text-cyan-900">{price}</h4>
+      <p className="text-base text-center font-light text-cyan-900">{name}</p>
       <div className="flex gap-0 justify-center">{ratings}</div>
       <button className="text-xl font-bold mb-4 text-cyan-900 hover:scale-105 transition-all" onClick={onAdd}>
         Add to Basket

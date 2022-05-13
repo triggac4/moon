@@ -20,6 +20,7 @@ const AllProduct = () => {
             price={`${product?.Price.Currency}${product?.Price?.Value}`}
             onAdd={() => {}}
             image={product?.ProductImage?.Link?.Href}
+            name={product?.Title}
             rating={product?.Reviews?.AverageStarReviewRating}
           />
         );
