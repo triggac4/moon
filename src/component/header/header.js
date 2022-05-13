@@ -5,7 +5,7 @@ import style from "../../style/navbar.module.css";
 const Header = () => {
   return (
     
-      <header className="fixed top-0 right-0 left-0 bg-cyan-900">
+      <header className="fixed top-0 right-0 left-0 bg-cyan-900 z-50">
         <Container className={"w-full flex justify-between text-white h-12 items-center"}>
         <div>
           <h1>LOGO</h1>
