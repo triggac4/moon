@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import ProductComponent from "../component/products/product_component";
 import ProductGrid from "../component/products/product_grid";
 import ApiConsumption from "../utils/apiConsumption";
 
 const AllProduct = () => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(null);
   useEffect(() => {
     ApiConsumption.getProducts().then((res) => {
       setProducts(res);
@@ -13,16 +14,17 @@ const AllProduct = () => {
 
   return (
     <ProductGrid>
-      {products.map((product, index) => {
+      {products&& products.map((product, index) => {
         return (
-          <ProductComponent
-            key={index}
-            price={`${product?.Price.Currency}${product?.Price?.Value}`}
-            onAdd={() => {}}
-            image={product?.ProductImage?.Link?.Href}
-            name={product?.Title}
-            rating={product?.Reviews?.AverageStarReviewRating}
-          />
+          <Link key={index} to={product?.MoonpigProductNo}>
+            <ProductComponent
+              price={`${product?.Price.Currency}${product?.Price?.Value}`}
+              onAdd={() => {}}
+              image={product?.ProductImage?.Link?.Href}
+              name={product?.Title}
+              rating={product?.Reviews?.AverageStarReviewRating}
+            />
+          </Link>
         );
       })}
     </ProductGrid>

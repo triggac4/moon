@@ -14,5 +14,18 @@ class ApiConsumption {
         console.log(error);
     }
   }
+
+  static async getProduct(id) {
+    try {
+      const response = await fetch(`${this.host}/product/${id}.json`);
+      const status = response.status;
+      if (status >= 200 && status <= 300) {
+        const data = await response.json();
+        return data;
+      }
+    } catch (error) {
+        console.log(error);
+    }
+  }
 }
 export default ApiConsumption;
