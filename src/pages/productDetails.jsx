@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from "react";
-import ProductComponent from "../component/products/product_component";
-import ProductGrid from "../component/products/product_grid";
-import ApiConsumption from "../utils/apiConsumption";
+import Card from "../component/ProductDetails/card";
+import ProductDetailLayout from "../component/ProductDetails/productDetailLayout";
 
-const AllProduct = () => {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    ApiConsumption.getProducts().then((res) => {
-      setProducts(res);
-    });
-  }, []);
-
+const ProductDetailPage = () => {
+  
   return (
-    
+    <ProductDetailLayout>
+      <Card rating={3.4}/>
+      <Card/>
+    </ProductDetailLayout>   
   );
 };
 
-export default AllProduct;
+export default ProductDetailPage;

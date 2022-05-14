@@ -6,6 +6,7 @@ import Header from "./component/header/header";
 import ProductComponent from "./component/products/product_component";
 import ProductGrid from "./component/products/product_grid";
 import AllProduct from "./pages/all_Product";
+import ProductDetailPage from "./pages/productDetails";
 const STYLE = {
   backgroundImage: `url(${backgroundImage})`,
   backgroundSize: "cover",
@@ -19,7 +20,7 @@ function App() {
       <Header />
       <Container className="overflow-auto">
         <Content>
-        <AllProduct/>
+        <ProductDetailPage/>
         </Content>
       </Container>
     </div>
