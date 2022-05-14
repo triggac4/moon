@@ -17,7 +17,6 @@ function App() {
   return (
     <div className="w-screen h-screen overflow-auto" style={STYLE}>
       <Header />
-      <Container className="overflow-auto">
         <Content>
           <Router>
             <Routes>
@@ -26,7 +25,6 @@ function App() {
             </Routes>
           </Router>
         </Content>
-      </Container>
     </div>
   );
 }

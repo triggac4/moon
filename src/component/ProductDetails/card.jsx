@@ -4,7 +4,7 @@ import RatingStar from "../products/rating_component";
 
 const Card = ({ img, inStock, price }) => {
   return (
-    <div className="w-full md:w-5/12 h-[500px] bg-white relative rounded-md overflow-clip">
+    <div className="w-full md:w-9/12 lg:w-5/12 h-[500px] bg-white relative rounded-md overflow-clip">
       <img
         src={img}
         alt="card image"
