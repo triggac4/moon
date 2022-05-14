@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+import {useState,useEffect} from "react";
 
 const useRating=(onEvery,rating)=>{
     let RatingComp = [];
@@ -10,7 +10,6 @@ const useRating=(onEvery,rating)=>{
         fraction -= 1;
       }
       setRatings(RatingComp);
-      console.log(RatingComp)
       RatingComp=[]
     }, []);
     return ratings
